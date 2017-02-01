@@ -1,0 +1,220 @@
+
+
+
+
+
+
+\documentclass[twoside,british,a4paper]{article}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb,upref}
+\usepackage{fourier}
+\usepackage{tgheros}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}% add latexsym if you need it
+\usepackage{microtype}
+\usepackage{anyfontsize}
+\usepackage{xcolor}
+
+
+%% Use accented characters
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+\usepackage{isodate}
+\cleanlookdateon
+
+%\usepackage{showframe}
+\usepackage{lipsum}
+
+
+
+\usepackage{geometry}
+\geometry{reset,ignoreall,
+  textheight=240mm,
+  textwidth=140mm,
+  bottom=30mm,
+  inner=31.5mm,
+  headheight=12.4pt
+  }
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.6\baselineskip}
+
+%\usepackage{authblk}
+
+
+
+
+
+
+\usepackage{fancyhdr}
+\renewcommand{\headrule}{}
+\renewcommand{\footrule}{}
+%
+\pagestyle{fancy}
+\fancyhead{}\fancyfoot{}
+\makeatletter
+\fancyhead[LE]{ \footnotesize\sffamily\upshape \@author}
+\fancyhead[RO]{ \footnotesize\sffamily\upshape \@title}
+\makeatother
+\fancyfoot[LE,RO]{\sffamily\bfseries\upshape \thepage}
+%
+\fancypagestyle{firstpagestyle}
+\fancyhead{}\fancyfoot{}
+\fancyfoot[LE,RO]{\sffamily\bfseries\upshape \thepage}
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\bfseries\upshape\sffamily\boldmath}{\thesection}{0.5em}{}
+
+\usepackage{titling}
+\setlength{\droptitle}{-12mm}
+\pretitle{\noindent\begin{minipage}{\textwidth}\LARGE\bfseries\upshape\sffamily\boldmath}
+\posttitle{\end{minipage} \vskip 1.0em}
+\preauthor{\noindent \begin{minipage}{\textwidth} \large\mdseries\sffamily}
+\postauthor{\end{minipage} \vskip 0.8em}
+\predate{ \noindent \hspace{-0.4em} \sffamily\small}
+\postdate{\vskip 1.4em}
+
+\renewenvironment{abstract}{
+   \noindent\begin{minipage}{\textwidth}
+   \upshape\sffamily \small
+  }{
+   \par \vskip 1.0em
+   {
+   \color{black!60}
+   \noindent \footnotesize
+   \textsuperscript{1}ICFO -- The Institute of Photonic Sciences
+   \par
+   $^*$emilio.pisanty@icfo.eu
+   }
+   \end{minipage} \vskip 4em
+  }
+
+
+
+\usepackage[%
+  bookmarks=true,
+  colorlinks,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue,
+  plainpages=false,
+  pdfpagelabels,
+  final,
+  breaklinks=true,
+  backref=page
+]{hyperref}
+\hypersetup{
+pdftitle={The young man the station}, 
+pdfauthor={Emilio Pisanty},
+pdfkeywords={latex, article, class}
+}
+
+
+
+\title{The young man the station}
+
+\author{Emilio Pisanty\textsuperscript{1$\,*$}}
+
+
+
+\date{ \today }
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+%\thispagestyle{firstpagestyle}
+
+\begin{abstract}
+The Young Man The Station is a LaTeX template built on top of the standard \textrm{article} class, and built on the notion that not all LaTeX-formatted papers need to use Computer Modern, be in two columns, or generally share the same old and tired look. The name of the template is a variation of a standard so-called `garden-path sentence' and despite appearances it is in fact a grammatically correct phrase.
+
+%\lipsum[1]
+\end{abstract}
+
+
+
+
+
+
+
+
+
+%\section{Introduction}
+
+%\subsection{A subsection}
+\noindent
+This is a paragraph with some text at the start of the article. This is just a sample but it has some mathematics like $x=y^2 +A_\mathrm{eff}$ and something else like $\hat{V}_\mathsf{L} = \sum_j \mathbf{r}_j^k$. Then it just starts repeating itself. This is a paragraph with some text at the start of the article. Then it just starts repeating itself. This is just a sample but it has some mathematics like $\chi = a_{d} \xi \zeta/\lambda = m_\mathrm{eff}d^2/(\hbar^2 \lambda)$ and something else like $r=|\vec{x}_A-\vec{x}_B|=\sqrt{(x_A-x_B)^2+(y_A-y_B)^2}$ or $d  \mathopen{}\left(  p+A(t)  \right)\mathclose{}  ^*$ . Then it just starts repeating itself.
+
+This is another paragraph with more text just to show paragraph breaks. If I say text, text, text, do you say go, go, go? This is really just filler text but to be honest including a whole paragraph of Lore Ipsum here seemed a bit too much.
+
+
+
+
+
+
+\section{Here are some maths}
+\lipsum[4]
+
+Here's an equation with a label, \eqref{first-equation}, and one further down is \eqref{K-r}. So, we have
+\begin{equation}
+V(\mathbf{x}_A,\mathbf{x}_B)=V(\vec{x}_A,\vec{x}_B)=d^2\frac{r^2-2\lambda^2}{(r^2+\lambda^2)^{5/2}},
+\label{first-equation}
+\end{equation}
+being $d$ a letter, $\lambda$ a gathingammy $r$ a letter in $r=|\vec{x}_A-\vec{x}_B|=\sqrt{(x_A-x_B)^2+(y_A-y_B)^2}$, with  $A$, $B$  labels. Moreover $\Lambda=\lambda/a$, and  $\chi = a_{d}/\lambda = m_{eff}d^2/(\hbar^2 \lambda)$, with $m_\mathrm{eff}=\hbar^2/2ta^2$, and $t$, are more maths expressions. So are $k=\sqrt{k_x^2+k_y^2}$ and $V_{latt}(\vec r)= V_0\left(\sin^2(k_x x)+ \sin^2(k_y y)\right))$, and a displayed equation is 
+\begin{equation}
+\left(\hat{T}_A+\hat{T}_B+{\hat V}(\vec{x}_A,\vec{x}_B)\right)\Phi(\vec{x}_A,\vec{x}_B)=E\Phi(\vec{x}_A,\vec{x}_B).
+\end{equation}
+
+Other displayed equations are
+\begin{equation}
+(\vec{\xi}_{\vec{K}}\cdot\vec{\hat{T}}_D+V(\vec{r}))\psi(\vec{r})=E\psi(\vec{r}),
+\label{K-r}
+\end{equation}
+where $\vec{\xi }_{\vec{K}}=-2t(\cos(K_x a/2),\cos(K_y a/2))$ and $\vec{\hat{I}}\cdot\vec{\hat{T}}_D\psi(\vec{r})=\sum_{i=x,y}\left(\psi(\vec{r}+\vec{\delta}_i)+\psi(\vec{r}-\vec{\delta}_i)\right)$, where $\vec{\delta}_i=a\hat{e}_{i}$, and also
+\begin{equation}
+\psi(\vec{r})=\frac{1}{N_x N_y}\sum_{\vec{q}}\psi(\vec{q})e^{i\vec{q}\cdot\vec{r}}.
+\end{equation}
+Here's a little bit of text to round out the paragraph after the equation and (probably) round out the page, so this needs to be a couple of lines long.
+
+Here some text: \lipsum[7] 
+
+Some text, then some more equations: these ones are
+$$
+E_{\vec{K},\vec{q}}=-4t\left(\cos(K_xa/2)\cos(q_xa)+\cos(K_ya/2)\cos(q_ya)\right)
+$$ 
+and 
+\begin{equation}
+(E-E_{\vec{K},\vec{q}})\psi(\vec{q})=\sum_{\vec{q'}}V(\vec{q}-\vec{q'})\psi(\vec{q'}). 
+\end{equation}
+To round out the paper, we now include a bunch of Lorem Ipsum paragraphs, some more math, more filler text, and call it a day.
+
+\lipsum[1-3]
+
+Here $\vec{\xi }_{\vec{K}}=-2t(\cos(K_x a/2),\cos(K_y a/2))$ and $\vec{\hat{I}}\cdot\vec{\hat{T}}_D\psi(\vec{r})=\sum_{i=x,y}\left(\psi(\vec{r}+\vec{\delta}_i)+\psi(\vec{r}-\vec{\delta}_i)\right)$, where $\vec{\delta}_i=a\hat{e}_{i}$, and also
+\begin{equation}
+\psi(\vec{r})=\frac{1}{N_x N_y}\sum_{\vec{q}}\psi(\vec{q})e^{i\vec{q}\cdot\vec{r}}
+\end{equation}
+and
+$$
+E_{\vec{K},\vec{q}}=-4t\left(\cos(K_xa/2)\cos(q_xa)+\cos(K_ya/2)\cos(q_ya)\right)
+$$ 
+and 
+\begin{equation}
+(E-E_{\vec{K},\vec{q}})\psi(\vec{q})=\sum_{\vec{q'}}V(\vec{q}-\vec{q'})\psi(\vec{q'}). 
+\end{equation}
+
+
+\lipsum[1-6]
+
+
+
+
+\end{document}
