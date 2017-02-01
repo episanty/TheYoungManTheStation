@@ -43,8 +43,6 @@
 \setlength{\parindent}{0em}
 \setlength{\parskip}{0.6\baselineskip}
 
-%\usepackage{authblk}
-
 
 
 
@@ -56,10 +54,8 @@
 %
 \pagestyle{fancy}
 \fancyhead{}\fancyfoot{}
-\makeatletter
 \fancyhead[LE]{ \footnotesize\sffamily\upshape \shortauthor}
 \fancyhead[RO]{ \footnotesize\sffamily\upshape \shorttitle}
-\makeatother
 \fancyfoot[LE,RO]{\sffamily\bfseries\upshape \thepage}
 %
 \fancypagestyle{firstpagestyle}
@@ -86,9 +82,9 @@
    {
    \color{black!60}
    \noindent \footnotesize
-   \textsuperscript{1}ICFO -- The Institute of Photonic Sciences
+   \address
    \par
-   $^*$emilio.pisanty@icfo.eu
+   \authoremail
    }
    \end{minipage} \vskip 4em
   }
@@ -113,18 +109,16 @@ pdfauthor={Emilio Pisanty},
 pdfkeywords={latex, article, class}
 }
 
-
-
 \title{The young man the station}
-\newcommand{\shorttitle}{The young man the station}
+\newcommand\shorttitle{short title}%{The young man the station}
 
 \author{Emilio Pisanty\textsuperscript{1$\,*$}}
-\newcommand{\shortauthor}{E. Pisanty}
+\newcommand\shortauthor{E. Pisanty}
 
-
+\newcommand\address{\textsuperscript{1}ICFO -- The Institute of Photonic Sciences}
+\newcommand\authoremail{$^*$emilio.pisanty@icfo.eu}
 
 \date{ \today }
-
 
 
 
@@ -142,22 +136,15 @@ pdfkeywords={latex, article, class}
 \thispagestyle{firstpagestyle}
 
 \begin{abstract}
-The Young Man The Station is a LaTeX template built on top of the standard \textrm{article} class, and built on the notion that not all LaTeX-formatted papers need to use Computer Modern, be in two columns, or generally share the same old and tired look. The name of the template is a variation of a standard so-called `garden-path sentence' and despite appearances it is in fact a grammatically correct phrase.
 
-%\lipsum[1]
+
+
+The Young Man The Station is a LaTeX template built on top of the standard \textrm{article} class, and built on the notion that not all LaTeX-formatted papers need to use Computer Modern, be in two columns, or generally share the same old and tired look. The name of the template is a variation of a standard so-called `garden-path sentence' and despite appearances it is in fact grammatically correct.
 \end{abstract}
 
 
 
 
-
-
-
-
-
-%\section{Introduction}
-
-%\subsection{A subsection}
 \noindent
 This is a paragraph with some text at the start of the article. This is just a sample but it has some mathematics like $x=y^2 +A_\mathrm{eff}$ and something else like $\hat{V}_\mathsf{L} = \sum_j \mathbf{r}_j^k$. Then it just starts repeating itself. This is a paragraph with some text at the start of the article. Then it just starts repeating itself. This is just a sample but it has some mathematics like $\chi = a_{d} \xi \zeta/\lambda = m_\mathrm{eff}d^2/(\hbar^2 \lambda)$ and something else like $r=|\vec{x}_A-\vec{x}_B|=\sqrt{(x_A-x_B)^2+(y_A-y_B)^2}$ or $d  \mathopen{}\left(  p+A(t)  \right)\mathclose{}  ^*$ . Then it just starts repeating itself.
 
@@ -171,7 +158,7 @@ This is another paragraph with more text just to show paragraph breaks. If I say
 \section{Here are some maths}
 \lipsum[4]
 
-Here's an equation with a label, \eqref{first-equation}, and one further down is \eqref{K-r}. So, we have
+Here's an equation with a label, \eqref{first-equation} and there's more equations further down. So, we have
 \begin{equation}
 V(\mathbf{x}_A,\mathbf{x}_B)=V(\vec{x}_A,\vec{x}_B)=d^2\frac{r^2-2\lambda^2}{(r^2+\lambda^2)^{5/2}},
 \label{first-equation}
@@ -184,7 +171,6 @@ being $d$ a letter, $\lambda$ a gathingammy $r$ a letter in $r=|\vec{x}_A-\vec{x
 Other displayed equations are
 \begin{equation}
 (\vec{\xi}_{\vec{K}}\cdot\vec{\hat{T}}_D+V(\vec{r}))\psi(\vec{r})=E\psi(\vec{r}),
-\label{K-r}
 \end{equation}
 where $\vec{\xi }_{\vec{K}}=-2t(\cos(K_x a/2),\cos(K_y a/2))$ and $\vec{\hat{I}}\cdot\vec{\hat{T}}_D\psi(\vec{r})=\sum_{i=x,y}\left(\psi(\vec{r}+\vec{\delta}_i)+\psi(\vec{r}-\vec{\delta}_i)\right)$, where $\vec{\delta}_i=a\hat{e}_{i}$, and also
 \begin{equation}
