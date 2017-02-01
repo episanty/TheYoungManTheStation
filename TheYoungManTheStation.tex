@@ -57,8 +57,8 @@
 \pagestyle{fancy}
 \fancyhead{}\fancyfoot{}
 \makeatletter
-\fancyhead[LE]{ \footnotesize\sffamily\upshape \@author}
-\fancyhead[RO]{ \footnotesize\sffamily\upshape \@title}
+\fancyhead[LE]{ \footnotesize\sffamily\upshape \shortauthor}
+\fancyhead[RO]{ \footnotesize\sffamily\upshape \shorttitle}
 \makeatother
 \fancyfoot[LE,RO]{\sffamily\bfseries\upshape \thepage}
 %
@@ -116,8 +116,10 @@ pdfkeywords={latex, article, class}
 
 
 \title{The young man the station}
+\newcommand{\shorttitle}{The young man the station}
 
 \author{Emilio Pisanty\textsuperscript{1$\,*$}}
+\newcommand{\shortauthor}{E. Pisanty}
 
 
 
@@ -128,10 +130,16 @@ pdfkeywords={latex, article, class}
 
 
 
+
+
+
+
+
+
 \begin{document}
 
 \maketitle
-%\thispagestyle{firstpagestyle}
+\thispagestyle{firstpagestyle}
 
 \begin{abstract}
 The Young Man The Station is a LaTeX template built on top of the standard \textrm{article} class, and built on the notion that not all LaTeX-formatted papers need to use Computer Modern, be in two columns, or generally share the same old and tired look. The name of the template is a variation of a standard so-called `garden-path sentence' and despite appearances it is in fact a grammatically correct phrase.
