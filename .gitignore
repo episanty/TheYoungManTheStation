@@ -1,3 +1,10 @@
+#########################
+
+## TeXMaker build directories:
+*/build/*
+
+#########################
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
