@@ -1,0 +1,21 @@
+\documentclass[twoside]{article}
+
+\usepackage{pgfpages,tikz,lipsum}
+
+\title{Document title}
+
+\begin{document}
+
+
+
+\begin{tikzpicture}[remember picture, overlay,x=1cm,y=1cm]
+  \node[anchor=center] at (current page.north east){%
+    \tikz \fill [blue!60] (0,0) rectangle (15,18);
+  };
+\end{tikzpicture}
+%
+%\maketitle
+%
+\lipsum[1-10]
+
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+
+% Paper size and margins
+\usepackage{geometry}
+\geometry{paper=letterpaper,margin=2cm}
+
+% Colors
+\usepackage[dvipsnames]{xcolor}
+
+% Tikz package and libraries
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{calc}
+
+\usepackage{eso-pic}
+
+% Figure definitions
+\tikzset{
+  ballSet/.pic = {
+    \begin{scope}[shading=ball,opacity=0.25]
+      \shade[ball color=red] ($(0, 2.25)$) circle (1.5cm);
+      \shade[ball color=green] ($(2.25, 0)$) circle (1.5cm);
+      \shade[ball color=blue] ($(0, -2.25)$) circle (1.5cm);
+      \shade[ball color=yellow] ($(-2.25, 0)$) circle (1.5cm);
+    \end{scope}
+  },
+  margin/.pic = {
+    \coordinate (ballA) at ($(current page.north west) + (1.5, -1.5)$);
+    \coordinate (ballB) at ($(current page.north east) + (-1.5, -1.5)$);
+    \coordinate (ballC) at ($(current page.south east) + (-1.5, 1.5)$);
+    \coordinate (ballD) at ($(current page.south west) + (1.5, 1.5)$);
+
+    \draw[color=Brown!50!white, line width=1mm, dash pattern=on 25pt off 5pt on 3pt off 5pt, double distance=1mm] (ballA) rectangle (ballC);
+
+    \begin{scope}[shading=ball]
+      \foreach \pos / \col in {(ballA)/red,(ballB)/green,(ballC)/blue,(ballD)/yellow}
+        \shade[ball color=\col] \pos circle (0.4cm);
+    \end{scope}
+  },
+  firstPage/.pic = {
+    \path (current page.center) pic {margin};
+    \path ($(current page.center) + (4.65,-7.75)$) pic {ballSet};
+  }
+}
+
+% Command to insert margin
+\newcommand{\Margin}{%
+  \begin{tikzpicture}[remember picture,overlay,x=1cm,y=1cm]
+    \path (current page.center) pic {margin};
+  \end{tikzpicture}%
+}
+
+\AddToShipoutPictureBG{\Margin}
+
+\begin{document}
+  Hello world!
+\end{document}

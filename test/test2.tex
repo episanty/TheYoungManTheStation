@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[
+contents={},
+opacity=1,
+scale=1.5,
+color=blue!90
+]{background}
+\usepackage{lipsum}
+\usepackage{ifthen}
+\AddEverypageHook{%
+\ifthenelse{\isodd{\value{page}}}%
+{\backgroundsetup{
+angle=90,
+position={0,-0.65\textheight},
+contents={The background package}
+}%
+}%
+{\backgroundsetup{
+angle=270,
+position={0.9\textwidth,-.7\textheight},%
+contents={Version 2.1}
+}%
+}%
+\BgMaterial}
+
+\title{Document title}
+\author{J Bloggs}
+
+
+\begin{document}
+\maketitle
+\lipsum[1-30]
+\end{document}
