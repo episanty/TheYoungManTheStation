@@ -30,6 +30,16 @@
 \usepackage{lipsum}
 
 
+%%% Bibliography
+\usepackage[numbers,sort&compress]{natbib}
+%% reduce spacing inside [1, 2]:
+\makeatletter \def\NAT@def@citea{\def\@citea{\NAT@separator\,}} \makeatother
+
+%%% Specified referencers
+\newcommand{\citer}[1]{Ref.~\citealp{#1}}
+\newcommand{\citers}[1]{Refs.~\citealp{#1}}
+\newcommand{\reffig}[1]{Fig.~\ref{#1}}
+
 
 \usepackage{geometry}
 \geometry{reset,ignoreall,
@@ -164,8 +174,7 @@
   plainpages=false,
   pdfpagelabels,
   final,
-  breaklinks=true,
-  backref=page
+  breaklinks=true
 ]{hyperref}
 \hypersetup{
 pdftitle={The young man the station}, 
@@ -200,7 +209,7 @@ pdfkeywords={latex, article, class}
 \thispagestyle{firstpagestyle}
 
 \begin{abstract}
-The Young Man The Station is a LaTeX template built on top of the standard \textrm{article} class, and built on the notion that not all LaTeX-formatted papers need to use Computer Modern, be in two columns, or generally share the same old and tired look. The name of the template is a variation of a standard garden-path sentence.
+The Young Man The Station is a LaTeX template built on top of the standard \textrm{article} class, and built on the notion that not all LaTeX-formatted papers need to use Computer Modern, be in two columns, or generally share the same old and tired look. The name of the template is a variation of a standard garden-path sentence~\cite{TomScott}.
 \\[0.6em]
 {
 \small
@@ -224,7 +233,9 @@ This is another paragraph with more text just to show paragraph breaks. This is 
 \section{Here are some maths}
 \lipsum[4]
 
-%Here's an equation with a label, \eqref{first-equation} and there's more equations further down. So, we have
+Here is a paragraph with a couple of citations: There is a paper \cite{Schulman-phys-rev}, as well as a book \cite{Schulman}, and the initial citation of some miscellaneous item~\cite{TomScott}.
+
+Here's an equation with a label, \eqref{first-equation} and there's more equations further down. So, we have
 \begin{equation}
 V(\mathbf{x}_A,\mathbf{x}_B)=V(\vec{x}_A,\vec{x}_B)=d^2\frac{r^2-2\lambda^2}{(r^2+\lambda^2)^{5/2}},
 \label{first-equation}
@@ -285,6 +296,17 @@ and
 \section*{Acknowledgements}
 Here you thank all the people ever and everyone who ever gave you money.
 
+
+%\singlespacing % for bibliography.
+%\setlength{\bibsep}{2.5mm}
+%\renewcommand\bibname{References}
+
+%% Add bibliography to TOC
+%\clearpage
+%\addcontentsline{toc}{chapter}{References}    
+
+\bibliographystyle{arthur} 
+\bibliography{references}{}
 
 
 \end{document}
