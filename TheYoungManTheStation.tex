@@ -209,10 +209,10 @@ pdfkeywords={latex, article, class}
 \thispagestyle{firstpagestyle}
 
 \begin{abstract}
-The Young Man The Station is a LaTeX template built on top of the standard \textrm{article} class, and built on the notion that not all LaTeX-formatted papers need to use Computer Modern, be in two columns, or generally share the same old and tired look. The name of the template is a variation of a standard garden-path sentence~\cite{TomScott}.
+The Young Man The Station is a LaTeX template built on top of the standard \verb|article| class, and built on the notion that not all LaTeX-formatted papers need to use Computer Modern, be in two columns, or generally share the same old and tired look. The name of the template is a variation of a standard garden-path sentence~\cite{TomScott}. You can find the LaTeX source at \url{github.com/episanty/TheYoungManTheStation}.
 \\[0.6em]
 {
-\small
+\footnotesize
 © Emilio Pisanty (2016), available under the MIT license.
 }
 \end{abstract}
@@ -244,6 +244,8 @@ being $d$ a letter, $\lambda$ a gathingammy $r$ a letter in $r=|\vec{x}_A-\vec{x
 \begin{equation}
 \left(\hat{T}_A+\hat{T}_B+{\hat V}(\vec{x}_A,\vec{x}_B)\right)\Phi(\vec{x}_A,\vec{x}_B)=E\Phi(\vec{x}_A,\vec{x}_B).
 \end{equation}
+
+As a side note, you can sometimes get some pretty persistent underfull box warnings (more specifically, \verb|Underfull \vbox (badness 10000)|) when there are displayed equations at the end of a page, so be careful with that if you're doing it. I'm not sure if it's due to the class or something else, so for the moment it is only something to keep an eye on.
 
 Other displayed equations are
 \begin{equation}
