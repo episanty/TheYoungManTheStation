@@ -84,6 +84,17 @@
   }
 }\BgMaterial}
 
+\usepackage{tcolorbox}
+\definecolor{boxcolor}{cmyk}{0.1,0,0,0}
+\newtcolorbox{abstractbox}{
+  arc=0pt,
+  boxrule=0pt,
+  colback=boxcolor,
+  boxsep=0.5em,
+  left=0pt, right=0pt, bottom=0pt, top=0pt,
+  width=\columnwidth
+}
+
 
 
 
@@ -129,7 +140,9 @@
    \upshape\sffamily 
    \small
    \fontsize{10.5}{13.2}\selectfont
+   \begin{abstractbox}
   }{
+   \end{abstractbox}
    \par \vskip 1.0em
    \end{minipage} \vskip 2.5em
   }
@@ -181,7 +194,11 @@ pdfkeywords={latex, article, class}
 \thispagestyle{firstpagestyle}
 
 \begin{abstract}
-The Young Man The Station is a LaTeX template built on top of the standard \textrm{article} class, and built on the notion that not all LaTeX-formatted papers need to use Computer Modern, be in two columns, or generally share the same old and tired look. The name of the template is a variation of a standard garden-path sentence and despite appearances it is in fact grammatically correct.
+The Young Man The Station is a LaTeX template built on top of the standard \textrm{article} class, and built on the notion that not all LaTeX-formatted papers need to use Computer Modern, be in two columns, or generally share the same old and tired look. The name of the template is a variation of a standard garden-path sentence.
+\\[0.8em]
+{\small
+© Emilio Pisanty (2016), available under the MIT license.
+}
 \end{abstract}
 
 
