@@ -5,6 +5,6 @@ The Young Man The Station is a LaTeX template built on top of the standard `arti
 
 You can download the source [here](https://github.com/episanty/TheYoungManTheStation/archive/master.zip), or you can [see](https://github.com/episanty/TheYoungManTheStation/blob/master/TheYoungManTheStation.pdf) and [download](https://github.com/episanty/TheYoungManTheStation/raw/master/TheYoungManTheStation.pdf) the pdf file to see how it looks.
 
-[![First page of the template](https://github.com/episanty/TheYoungManTheStation/raw/master/TheYoungManTheStation.png)](https://github.com/episanty/TheYoungManTheStation/blob/master/TheYoungManTheStation.pdf)
+[![First page of the template](https://github.com/episanty/TheYoungManTheStation/raw/master/TheYoungManTheStation.png | width=600)](https://github.com/episanty/TheYoungManTheStation/blob/master/TheYoungManTheStation.pdf)
 
 © Emilio Pisanty (2016), available under the MIT license.
