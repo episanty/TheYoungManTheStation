@@ -42,9 +42,6 @@
 \setlength{\parindent}{0em}
 \setlength{\parskip}{0.6\baselineskip}
 
-
-
-
 \usepackage[contents={},opacity=1,]{background}
 \usepackage{ifthen}
 \definecolor{cornerboxcyan}{cmyk}{1,0.05,0,0.05}
@@ -84,16 +81,6 @@
   }
 }\BgMaterial}
 
-\usepackage{tcolorbox}
-\definecolor{boxcolor}{cmyk}{0.1,0,0,0}
-\newtcolorbox{abstractbox}{
-  arc=0pt,
-  boxrule=0pt,
-  colback=boxcolor,
-  boxsep=0.5em,
-  left=0pt, right=0pt, bottom=0pt, top=0pt,
-  width=\columnwidth
-}
 
 
 
@@ -135,16 +122,35 @@
 \predate{ \noindent \hspace{-0.4em} \sffamily\small}
 \postdate{\vskip 0.0em}
 
+
+
+\usepackage{tcolorbox}
+\definecolor{abstractboxcolor}{cmyk}{0.1,0,0,0}
+\newtcolorbox{abstractbox}{
+  arc=0pt,
+  boxrule=0pt,
+  colback=abstractboxcolor,
+  boxsep=0.5em,
+  left=0pt, right=0pt, bottom=0pt, top=0pt,
+  width=\columnwidth
+}
+%
+%%% To avoid some bad box warnings, as per tex.se/q/62296/
+\makeatletter
+ \def\@textbottom{\vskip \z@ \@plus 1pt}
+ \let\@texttop\relax
+\makeatother
+%
 \renewenvironment{abstract}{
-   \noindent\begin{minipage}{\textwidth}
+   \noindent
+   \begin{minipage}{\textwidth}
    \upshape\sffamily 
-   \small
-   \fontsize{10.5}{13.2}\selectfont
    \begin{abstractbox}
+   \fontsize{10.5}{13.2}\selectfont
   }{
    \end{abstractbox}
-   \par \vskip 1.0em
-   \end{minipage} \vskip 2.5em
+   \end{minipage} 
+   \vskip 2.0em
   }
 
 
@@ -195,8 +201,9 @@ pdfkeywords={latex, article, class}
 
 \begin{abstract}
 The Young Man The Station is a LaTeX template built on top of the standard \textrm{article} class, and built on the notion that not all LaTeX-formatted papers need to use Computer Modern, be in two columns, or generally share the same old and tired look. The name of the template is a variation of a standard garden-path sentence.
-\\[0.8em]
-{\small
+\\[0.6em]
+{
+\small
 © Emilio Pisanty (2016), available under the MIT license.
 }
 \end{abstract}
@@ -207,7 +214,7 @@ The Young Man The Station is a LaTeX template built on top of the standard \text
 \section{Introduction}
 This is a paragraph with some text at the start of the article. This is just a sample but it has some mathematics like $x=y^2 +A_\mathrm{eff}$ and something else like $\hat{V}_\mathsf{L} = \sum_j \mathbf{r}_j^k$. Then it just starts repeating itself. This is a paragraph with some text at the start of the article. Then it just starts repeating itself. This is just a sample but it has some mathematics like $\chi = a_{d} \xi \zeta/\lambda = m_\mathrm{eff}d^2/(\hbar^2 \lambda)$ and something else like $r=|\vec{x}_A-\vec{x}_B|=\sqrt{(x_A-x_B)^2+(y_A-y_B)^2}$ or $d  \mathopen{}\left(  p+A(t)  \right)\mathclose{}  ^*$ . Then it just starts repeating itself.
 
-This is another paragraph with more text just to show paragraph breaks. If I say text, text, text, do you say go, go, go? This is really just filler text but to be honest including a whole paragraph of Lore Ipsum here seemed a bit too much.
+This is another paragraph with more text just to show paragraph breaks. This is really just filler text but to be honest including a whole paragraph of Lorem Ipsum here seemed a bit too much. So instead here is a bit of filler text to flesh out the paragraph a bit.
 
 
 
@@ -217,7 +224,7 @@ This is another paragraph with more text just to show paragraph breaks. If I say
 \section{Here are some maths}
 \lipsum[4]
 
-Here's an equation with a label, \eqref{first-equation} and there's more equations further down. So, we have
+%Here's an equation with a label, \eqref{first-equation} and there's more equations further down. So, we have
 \begin{equation}
 V(\mathbf{x}_A,\mathbf{x}_B)=V(\vec{x}_A,\vec{x}_B)=d^2\frac{r^2-2\lambda^2}{(r^2+\lambda^2)^{5/2}},
 \label{first-equation}
