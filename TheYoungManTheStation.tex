@@ -106,23 +106,27 @@
 \pretitle{\noindent\begin{minipage}{\textwidth}\LARGE\bfseries\upshape\sffamily\boldmath}
 \posttitle{\end{minipage} \vskip 1.0em}
 \preauthor{\noindent \begin{minipage}{\textwidth} \large\mdseries\sffamily}
-\postauthor{\end{minipage} \vskip 0.8em}
+\postauthor{
+  \end{minipage} 
+  \vskip 0.3em
+  {
+   \color{black!80}
+   \noindent \small
+   \address
+   \par \vskip -0.8em
+   \authoremail
+   }
+   \par
+  }
 \predate{ \noindent \hspace{-0.4em} \sffamily\small}
-\postdate{\vskip 1.4em}
+\postdate{\vskip 0.0em}
 
 \renewenvironment{abstract}{
    \noindent\begin{minipage}{\textwidth}
    \upshape\sffamily \small
   }{
    \par \vskip 1.0em
-   {
-   \color{black!60}
-   \noindent \footnotesize
-   \address
-   \par
-   \authoremail
-   }
-   \end{minipage} \vskip 4em
+   \end{minipage} \vskip 2.5em
   }
 
 
