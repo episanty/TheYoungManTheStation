@@ -2,9 +2,11 @@
 
 
 
-
-
 \documentclass[twoside,british,a4paper]{article}
+%%% The Young Man The Station
+%%% A LaTeX article template. See https://github.com/episanty/TheYoungManTheStation for more.
+%%% © Emilio Pisanty (2016), available under the MIT license.
+
 
 
 \usepackage{amsmath}
@@ -22,23 +24,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-
+%% slightly prettier date
 \usepackage{isodate}
 \cleanlookdateon
 
+%% Mainly useful at draft stage
 %\usepackage{showframe}
 \usepackage{lipsum}
 
-
-%%% Bibliography
-\usepackage[numbers,sort&compress]{natbib}
-%% reduce spacing inside [1, 2]:
-\makeatletter \def\NAT@def@citea{\def\@citea{\NAT@separator\,}} \makeatother
-
-%%% Specified referencers
-\newcommand{\citer}[1]{Ref.~\citealp{#1}}
-\newcommand{\citers}[1]{Refs.~\citealp{#1}}
-\newcommand{\reffig}[1]{Fig.~\ref{#1}}
 
 
 \usepackage{geometry}
@@ -92,9 +85,6 @@
 }\BgMaterial}
 
 
-
-
-
 \usepackage{fancyhdr}
 \renewcommand{\headrule}{}
 \renewcommand{\footrule}{}
@@ -133,7 +123,6 @@
 \postdate{\vskip 0.0em}
 
 
-
 \usepackage{tcolorbox}
 \definecolor{abstractboxcolor}{cmyk}{0.1,0,0,0}
 \newtcolorbox{abstractbox}{
@@ -164,6 +153,16 @@
   }
 
 
+%%% Bibliography
+\usepackage[numbers,sort&compress]{natbib}
+%% reduce spacing inside [1, 2]:
+\makeatletter \def\NAT@def@citea{\def\@citea{\NAT@separator\,}} \makeatother
+
+%%% Specified referencers
+\newcommand{\citer}[1]{Ref.~\citealp{#1}}
+\newcommand{\citers}[1]{Refs.~\citealp{#1}}
+\newcommand{\reffig}[1]{Fig.~\ref{#1}}
+
 
 \usepackage[%
   bookmarks=true,
@@ -188,15 +187,10 @@ pdfkeywords={latex, article, class}
 \author{Emilio Pisanty\textsuperscript{1$\,*$}}
 \newcommand\shortauthor{E. Pisanty}
 
-\newcommand\address{\textsuperscript{1}ICFO -- The Institute of Photonic Sciences}
+\newcommand\address{\textsuperscript{1}ICFO -- The Institute of Photonic Sciences, Barcelona, Spain}
 \newcommand\authoremail{$^*$author@email.com}
 
 \date{ \today }
-
-
-
-
-
 
 
 
