@@ -7,6 +7,6 @@ You can download the source [here](https://github.com/episanty/TheYoungManTheSta
 
 [<img src="https://github.com/episanty/TheYoungManTheStation/raw/master/TheYoungManTheStation.png" width="600" title="First page of the template">](https://github.com/episanty/TheYoungManTheStation/blob/master/TheYoungManTheStation.pdf)
 
-(Note that the border has been added for better visibility.
+(Note that the border has been added for better visibility.)
 
 © Emilio Pisanty (2016), available under the MIT license.
